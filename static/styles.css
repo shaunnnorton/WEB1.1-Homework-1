@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    color: aqua;
+    align-items: center;
+}
+p{
+    font-weight: 999;
+    font-family: Arial, Helvetica, sans-serif;
+    border: black inset 8px;
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.2);
+    word-wrap: normal;
+}
