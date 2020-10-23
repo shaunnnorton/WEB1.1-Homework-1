@@ -6,12 +6,10 @@ app = Flask(__name__)
 @app.route("/")
 def homepage():
     """Shows a greeting to the user"""
-    output = 'Are you there, world? It\'s me, Ducky!'
     return 'Are you there, world? It\'s me, Ducky!'
 
 @app.route("/SeaCucumber")
 def sea_cucumber():
-    output = "My favorite animal is a Sea Cucumber"
     return "My favorite animal is a Sea Cucumber"
 
 @app.route("/penguins")
@@ -21,26 +19,21 @@ def penguins():
 @app.route('/animal/<users_animal>')
 def favorite_animal(users_animal):
     """Display a message to the user that changes based on their favorite animal."""
-    output = f'Wow, {users_animal} is my favorite animal, too!'
     return f'Wow, {users_animal} is my favorite animal, too!'
 
 @app.route('/dessert/<users_dessert>')
 def favorite_dessert(users_dessert):
-    output = "How did you know I liked " + users_dessert +"?"
     return "How did you know I liked " + users_dessert +"?"
 
 @app.route("/madlibs/<adjective>/<noun>")
 def new_madlib(adjective,noun):
-    output = "The " + adjective + " " + noun + " jumped into the fishtank!"
     return "The " + adjective + " " + noun + " jumped into the fishtank!"
 
 @app.route('/multiply/<number1>/<number2>')
 def multiply(number1,number2):
     if number1.isdigit() is True and number2.isdigit() is True:
-        output = number1 + " Times " + number2 + " is " + str((int(number1)*int(number2)))
         return number1 + " times " + number2 + " is " + str((int(number1)*int(number2)))+"."
     else:
-        output = "Invalid inputs. Please try again by entering 2 numbers!"
         return "Invalid inputs. Please try again by entering 2 numbers!"
 
 @app.route('/sayntimes/<word>/<n>')
